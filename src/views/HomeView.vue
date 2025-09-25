@@ -3,6 +3,7 @@
      <v-sheet class="pa-12 text-center bg-surface-variant rounded-pill" color="grey-darken-3">
         <h1> 웹소설 사이트 </h1>
         <div class="d-flex text-center justify-center ga-2">
+            <v-chip-group>
                   <v-hover v-slot:default="{ isHovering, props }"> 
                     <v-chip class="ma-2" 
                             prepend-icon="mdi-account-circle"
@@ -52,17 +53,23 @@
                             신작
                           </v-chip>
               
-           
+           </v-chip-group>
         </div>
      </v-sheet>
 
      <v-sheet class="mt-3 pa-5" color="grey-darken-4">
-        Body
+        <FantageView />
+     </v-sheet>
+
+      <v-sheet class="mt-3 pa-5" color="grey-darken-4">
+        <RomansView />
      </v-sheet>
 
   </v-theme-provider>
 </template>
 
 <script setup>
+import FantageView from '@/views/FantageView.vue'
+import RomansView  from '@/views/RomansView.vue';
 
 </script>
