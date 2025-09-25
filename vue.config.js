@@ -4,7 +4,7 @@ module.exports = defineConfig({
 
   outputDir: './docs', 
    publicPath: process.env.NODE_ENV === 'production'
-    ? '/ad-novel-test/'
+    ? '/ad-novel-01/'
     : '/',
 
 
