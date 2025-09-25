@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkad_novel_01"]=self["webpackChunkad_novel_01"]||[]).push([[594],{5282:function(n,u,a){a.r(u),a.d(u,{default:function(){return l}});var e=a(6768);const t={class:"about"};function r(n,u){return(0,e.uX)(),(0,e.CE)("div",t,[...u[0]||(u[0]=[(0,e.Lk)("h1",null,"This is an about page",-1)])])}var s=a(1241);const c={},o=(0,s.A)(c,[["render",r]]);var l=o}}]);
+//# sourceMappingURL=about.574868df.js.map
