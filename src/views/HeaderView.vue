@@ -68,13 +68,14 @@
 
 <script setup>
   import { ref, onMounted } from 'vue';
+  import axios from 'axios'
  
   const category1 = ref([
-                          {kindCd: '01', kindName: '판타지'},
-                          {kindCd: '02', kindName: '무협'},
-                          {kindCd: '03', kindName: '로맨스'},
-                          {kindCd: '04', kindName: '스릴러'},
-                          {kindCd: '05', kindName: '미스테리'},
+                        //   {kindCd: '01', kindName: '판타지'},
+                        //   {kindCd: '02', kindName: '무협'},
+                        //   {kindCd: '03', kindName: '로맨스'},
+                        //   {kindCd: '04', kindName: '스릴러'},
+                        //   {kindCd: '05', kindName: '미스테리'},
                         
                         ])
 
@@ -83,8 +84,19 @@
       fetchCategoryData01();
   })
 
-   function fetchCategoryData01() {
+    async function fetchCategoryData01() {
        console.log("Homeview > fetchCategoryData01 Called ")
+
+       await axios.get("http://localhost:9091/category02/list")
+       .then( (response) => {
+           console.log( "response ==>", response.data )
+           category1.value = response.data
+       })
+       .catch( err => {
+           console.log( "error ==> ", err.data )
+       })
+       .then()
+
    }
 
 </script>
